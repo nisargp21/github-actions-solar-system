@@ -67,6 +67,8 @@ jobs:
     docker:
       runs-on: ubuntu-latest
       needs: [code-coverge, unit-testing]
+      permissions:
+        packages: write
       steps:
         - name: Checkout repository
           uses: actions/checkout@v4
@@ -83,6 +85,7 @@ jobs:
             push: true
             tags: 'ghcr.io/${{ github.repository_owner }}/solar-system:${{ github.sha }}'
     
+
 
 
 
