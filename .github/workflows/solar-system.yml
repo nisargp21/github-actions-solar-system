@@ -24,7 +24,7 @@ jobs:
           with:
             node-version: 20
 
-        - name: Cache npm dependencies
+        - name: Cache NPM dependencies
           uses: actions/cache@v4
           with:
             path: ~/.npm
@@ -63,6 +63,7 @@ jobs:
             name: Code-Coverage-Result
             path: coverage
             retention-days: 5
+
 
 
 
